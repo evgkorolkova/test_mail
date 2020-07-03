@@ -13,14 +13,14 @@ def test_sign_in(browser):
 
 def test_search_letters(browser):
     account_page = MailAccount(browser)
-    account_page.enter_search_email("ev.korolkova73@gmail.com")
+    account_page.enter_search_email("test@mail.com")
     account_page.click_create_letter()
     return account_page
 
 
 def test_send_letter(browser):
     letter = CreateLetter(browser)
-    letter.input_recipient_email("ev.korolkova73@gmail.com")
+    letter.input_recipient_email("test2@email.com")
     letter.input_letter_subject("Тестовое задание. Королькова")
     letter.input_letter_body()
     letter.send_email()
